@@ -16,6 +16,7 @@ vendor
 web/cpresources
 
 # npm
+/.npmrc
 node_modules
 
 # temporary build files

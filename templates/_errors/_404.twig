@@ -8,7 +8,7 @@ TEMPLATE SETTINGS
 {# Page classes #}
 
 {# Import Macros #}
-{# {% import "_macros/_global" as macros %} #}
+{% import "_macros/_global" as macros %}
 
 {# Other #}
 
@@ -20,24 +20,21 @@ END TEMPLATE SETTINGS
 
 {% block content %}
 
-    <div class="pt-8 pb-4">
+    <div class="pt-8 mb-4">
         <div class="container mx-auto text-center">
-            <h1>Oops, looks like that page is missing.</h1>
+            <h1 class="{{ macros.headingClass("h2") }}">Oops, looks like that page is missing.</h1>
         </div>
     </div>
 
-    <section class="py-4 lg:py-8">
+    <section class="pb-8">
 
-        <div class="md:container mx-auto px-1">
+        <div class="max-w-900 mx-auto px-1">
     
-            <div class="-mx-1 flex flex-row flex-wrap items-center">
-                    
-                <div class="w-full px-1">
-                    <div class="text-1p2">
-                        <p>Sorry, but we can't seem to find the page you requested. You can try going to the home page and starting over.</p>
+            <div class="text-1p2 text-center">
+                <p>Sorry, but we can't seem to find the page you requested. You can try going to the home page and starting over.</p>
 
-                        <a class="btn btn--primary btn--lg mt-8" href="{{ siteUrl }}">Go to Homepage</a>
-                    </div>
+                <div class="mt-4 flex justify-center">
+                    <a class="btn btn--primary btn--lg" href="{{ siteUrl }}">Go to Homepage</a>
                 </div>
 
             </div>
